@@ -1,0 +1,69 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    background: linear-gradient(to right, #F9D423, #e65c00);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    height: 500px; 
+    width: 800px;
+    border-radius: 5px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.ball{
+    height: 70px;
+    width: 70px;
+    background-color: black;
+    border-radius: 50%;
+    animation: ball infinite 3s linear;
+    
+}
+.box::before, .box::after{
+    content: '';
+    position: absolute;
+    background-color:black;
+    width: 50px;
+    height: 180px;
+}
+.box::before{
+    top: 35%;
+    left: 0;
+    animation: left infinite 4s linear;
+}
+.box::after{
+    top: 35%;
+    right: 0;
+    animation: right infinite 4s  linear;
+
+}
+@keyframes left{
+    0%{transform:translateY(0)}
+    25%{transform: translateY(-160px);}
+    50%{transform: translateY(0);}
+    75%{transform: translateY(150px);}
+    100%{transform:translateY(0)}
+}
+@keyframes right{
+    0%{transform:translateY(0)}
+    25%{transform: translateY(150px);}
+    50%{transform: translateY(0);}
+    75%{transform: translateY(-160px);}
+    100%{transform:translateY(0)}
+}
+@keyframes ball{
+    0%{transform:translateX(0)}
+    25%{transform: translateX(320px);}
+    50%{transform: translateX(0);}
+    75%{transform: translateX(-320px);}
+    100%{transform:translateX(0)}
+}
