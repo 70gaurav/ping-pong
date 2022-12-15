@@ -25,7 +25,7 @@
     width: 70px;
     background-color: black;
     border-radius: 50%;
-    animation: ball infinite 3s linear;
+    animation: ball infinite 2s linear;
     
 }
 .box::before, .box::after{
@@ -48,16 +48,16 @@
 }
 @keyframes left{
     0%{transform:translateY(0)}
-    25%{transform: translateY(-160px);}
+    25%{transform: translateY(-175px);}
     50%{transform: translateY(0);}
-    75%{transform: translateY(150px);}
+    75%{transform: translateY(145px);}
     100%{transform:translateY(0)}
 }
 @keyframes right{
     0%{transform:translateY(0)}
-    25%{transform: translateY(150px);}
+    25%{transform: translateY(145px);}
     50%{transform: translateY(0);}
-    75%{transform: translateY(-160px);}
+    75%{transform: translateY(-175px);}
     100%{transform:translateY(0)}
 }
 @keyframes ball{
